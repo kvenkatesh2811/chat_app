@@ -69,14 +69,14 @@ app.use("/api/messages", messageRouter);
 
 // Get PORT from .env
 // If PORT is not available, use 5000
-const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 await connectDB();
 
 
 if(process.env.NODE_ENV!=="production"){
-
+  
+  const PORT = process.env.PORT || 5000;
   // Start the server and listen for requests
   server.listen(PORT, () => {
     // Print server running message
