@@ -10,7 +10,7 @@ import toast, { Toaster } from "react-hot-toast";
 const App = () => {
   const { authUser } = useContext(AuthContext);
   return (
-    <div className="bg-[url('./src/assets/bgImage.svg')] text-white bg-contain">
+    <div className="bg-[url('/bgImage.svg')] text-white bg-contain">
       <Toaster />
       <Routes>
         <Route

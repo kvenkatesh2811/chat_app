@@ -74,11 +74,17 @@ const PORT = process.env.PORT || 5000;
 // Connect to MongoDB
 await connectDB();
 
-// Start the server and listen for requests
-server.listen(PORT, () => {
-  // Print server running message
-  console.log(`Server is running on port ${PORT}`);
-});
+
+if(process.env.NODE_ENV!=="production"){
+
+  // Start the server and listen for requests
+  server.listen(PORT, () => {
+    // Print server running message
+    console.log(`Server is running on port ${PORT}`);
+  });
+
+
+}
 
 /* import express from "express";
 import "dotenv/config";
