@@ -85,6 +85,7 @@ if(process.env.NODE_ENV!=="production"){
 
 
 }
+export default server;
 
 /* import express from "express";
 import "dotenv/config";
