@@ -1,6 +1,8 @@
 import React from "react";
 import { imagesDummyData } from "../assets/assets";
-
+import { useContext, useEffect, useState } from "react";
+import { ChatContext } from "../../context/ChatContext";
+import { AuthContext } from "../../context/AuthContext";
 const RightSideBar = () => {
   const { selectedUser, messages } = useContext(ChatContext);
   const { logout, onlineUsers } = useContext(AuthContext);
