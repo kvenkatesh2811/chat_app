@@ -74,7 +74,7 @@ app.use("/api/messages", messageRouter);
 await connectDB();
 
 
-if(process.env.NODE_ENV!=="production"){
+if (process.env.VERCEL !== "1") {
   
   const PORT = process.env.PORT || 5000;
   // Start the server and listen for requests
